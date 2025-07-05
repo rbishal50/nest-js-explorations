@@ -8,7 +8,7 @@ export class TasksService {
   private tasks: Task[] = [];
   private idCounter = 1;
 
-  create(createTaskDto: CreateTaskDto) {
+  create(createTaskDto: CreateTaskDto): Task {
     const task: Task = {
       id: this.idCounter++,
       ...createTaskDto,
